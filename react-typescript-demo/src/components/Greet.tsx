@@ -1,15 +1,19 @@
 type GreetProps = {
   name: string;
+  messageCount: number;
+  isLoggedIn: boolean;
 };
 
-const Greet = (props: GreetProps) => {
+const Greet: React.FC<GreetProps> = ({ name, messageCount, isLoggedIn }) => {
   return (
     <div>
-      <h2>Welcome {props.name} you have 10 unread messages</h2>
+      <h2>
+        {isLoggedIn
+          ? `Welcome ${name}, you have ${messageCount} unread messages`
+          : "Welcome Guest"}
+      </h2>
     </div>
   );
 };
 
 export default Greet;
-
-
