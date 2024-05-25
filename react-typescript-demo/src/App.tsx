@@ -7,13 +7,14 @@ import { Person } from "./components/Person";
 import { PersonList } from "./components/PersonList";
 import { Status } from "./components/Status";
 import { Input } from "./components/Input";
+import { Container } from "./components/Container";
 
 function App() {
   const PersonName = {
     first: "Bruce",
     last: "Wayne",
   };
-
+  
   const nameList = [
     {
       first: "Bruce",
@@ -44,6 +45,7 @@ function App() {
         }}
       />
       <Input value="" handleChange={(event) => console.log(event)} />
+      <Container styles={{ border: "1px solid red", padding: "8px" }} />
     </>
   );
 }
