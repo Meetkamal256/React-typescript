@@ -14,7 +14,7 @@ function App() {
     first: "Bruce",
     last: "Wayne",
   };
-  
+
   const nameList = [
     {
       first: "Bruce",
