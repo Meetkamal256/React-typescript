@@ -1,4 +1,5 @@
 import "./App.css";
+import { Button } from "./components/Button";
 import Greet from "./components/Greet";
 import { Heading } from "./components/Heading";
 import { Oscar } from "./components/Oscar";
@@ -11,7 +12,7 @@ function App() {
     first: "Bruce",
     last: "Wayne",
   };
-  
+
   const nameList = [
     {
       first: "Bruce",
@@ -36,6 +37,11 @@ function App() {
       <Oscar>
         <Heading>oscar goes to leonardo Dicaprio</Heading>
       </Oscar>
+      <Button
+        handleClick={(event, id) => {
+          console.log("Button Clicked", event, id);
+        }}
+      />
     </>
   );
 }
