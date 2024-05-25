@@ -1,10 +1,14 @@
 type GreetProps = {
   name: string;
-  messageCount: number;
+  messageCount?: number;
   isLoggedIn: boolean;
 };
 
-const Greet: React.FC<GreetProps> = ({ name, messageCount, isLoggedIn }) => {
+const Greet: React.FC<GreetProps> = ({
+  name,
+  messageCount = 0,
+  isLoggedIn,
+}) => {
   return (
     <div>
       <h2>
