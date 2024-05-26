@@ -9,6 +9,8 @@ import { Status } from "./components/Status";
 import { Input } from "./components/Input";
 import { Container } from "./components/Container";
 import { Counter } from "./components/state/Counter";
+import { ThemeContextProvider } from "./components/context/ThemeContext";
+import { Box } from "./components/context/Box";
 
 function App() {
   const PersonName = {
@@ -30,7 +32,7 @@ function App() {
       last: "Diana",
     },
   ];
-  
+
   return (
     <>
       <Greet name={"kamal"} messageCount={20} isLoggedIn={true} />
@@ -49,6 +51,9 @@ function App() {
       <Input value="" handleChange={(event) => console.log(event)} />
       <Container styles={{ border: "1px solid red", padding: "8px" }} />
       <Counter />
+      <ThemeContextProvider>
+        <Box />
+      </ThemeContextProvider>
     </>
   );
 }
