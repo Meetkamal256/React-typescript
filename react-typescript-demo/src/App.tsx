@@ -11,13 +11,15 @@ import { Container } from "./components/Container";
 import { Counter } from "./components/state/Counter";
 import { ThemeContextProvider } from "./components/context/ThemeContext";
 import { Box } from "./components/context/Box";
+import { UserContextProvider } from "./components/context/UserContext";
+import { User } from "./components/context/User";
 
 function App() {
   const PersonName = {
     first: "Bruce",
     last: "Wayne",
   };
-
+  
   const nameList = [
     {
       first: "Bruce",
@@ -32,7 +34,7 @@ function App() {
       last: "Diana",
     },
   ];
-
+  
   return (
     <>
       <Greet name={"kamal"} messageCount={20} isLoggedIn={true} />
@@ -54,6 +56,9 @@ function App() {
       <ThemeContextProvider>
         <Box />
       </ThemeContextProvider>
+      <UserContextProvider>
+        <User />
+      </UserContextProvider>
     </>
   );
 }
